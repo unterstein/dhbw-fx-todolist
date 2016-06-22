@@ -1,5 +1,8 @@
 package ba.java.todolist.model;
 
+import ba.java.todolist.serialization.LocalDateAdapter;
+
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -50,6 +53,8 @@ public class Todo implements Serializable {
     this.prioritized = prioritized;
   }
 
+  // adapter needed for serialization
+  @XmlJavaTypeAdapter(LocalDateAdapter.class)
   public LocalDate getDueDate() {
     return dueDate;
   }

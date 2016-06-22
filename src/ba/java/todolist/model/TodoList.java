@@ -31,4 +31,13 @@ public class TodoList implements Serializable {
   public void setName(String name) {
     this.name = name;
   }
+
+  // needed for serialization
+  public List<Todo> getTodo() {
+    return todo;
+  }
+
+  public void setTodo(List<Todo> todo) {
+    this.todo = todo;
+  }
 }

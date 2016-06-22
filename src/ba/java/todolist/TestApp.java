@@ -1,9 +1,12 @@
 package ba.java.todolist;
 
 import ba.java.todolist.model.App;
+import ba.java.todolist.model.Todo;
 import ba.java.todolist.model.User;
 import ba.java.todolist.model.TodoList;
 import ba.java.todolist.serialization.SerializationMode;
+
+import java.time.LocalDate;
 
 public class TestApp {
 
@@ -20,7 +23,8 @@ public class TestApp {
     TodoList baumarkt = johannes.addTodoList("Baumarkt");
     baumarkt.addTodo("Hammer");
     baumarkt.addTodo("Nagel");
-    baumarkt.addTodo("Leiter");
+    Todo leiter = baumarkt.addTodo("Leiter");
+    leiter.setDueDate(LocalDate.now());
 
     // save
     app.save();

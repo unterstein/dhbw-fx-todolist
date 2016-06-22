@@ -49,4 +49,13 @@ public class User implements Serializable {
   public void setPassword(String password) {
     this.password = password;
   }
+
+  // needed for serialization
+  public List<TodoList> getLists() {
+    return lists;
+  }
+
+  public void setLists(List<TodoList> lists) {
+    this.lists = lists;
+  }
 }

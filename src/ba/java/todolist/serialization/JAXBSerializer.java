@@ -11,7 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Map;
 
-public class XmlSerializer implements Serializer {
+public class JAXBSerializer implements Serializer {
 
   @Override
   public void save(Map<String, User> users) {

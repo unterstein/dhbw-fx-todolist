@@ -4,7 +4,7 @@ public enum SerializationMode {
   BINARY(new BinarySerializer()), //
   JAXB(new JAXBSerializer()), //
   XML_ENCODE(new XmlEncodeSerializer()), //
-  LIST(null), //
+  OWN_LINE_BASED(new OwnLineBasedSerializer()), //
   ;
 
   private Serializer serializer;

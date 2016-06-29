@@ -62,4 +62,9 @@ public class Todo implements Serializable {
   public void setDueDate(LocalDate dueDate) {
     this.dueDate = dueDate;
   }
+
+  public String toSerializeString() {
+    return this.getName() + ", " + this.getComment() + ", " + this.isDone() + ", " + this.isPrioritized() + ", "
+        + this.getDueDate();
+  }
 }
